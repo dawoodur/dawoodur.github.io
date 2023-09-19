@@ -1,6 +1,4 @@
-
-*
-{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -162,6 +160,21 @@ body
 {
     color: #fff;
 }
+.box form .container a
+{
+    color: #222;
+    text-decoration: none;
+    align-items: center;
+    top: 0;
+    bottom: 1px;
+    border: 2px solid #fff;
+    padding: 8px 130px;
+    background-color: #fff;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+/*
 .box form input[type="submit"]
 {
     align-content: center;
@@ -180,7 +193,7 @@ body
 {
     opacity: 0.8;
 }
-
+*/
 
 
 /*
