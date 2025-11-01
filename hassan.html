@@ -22,7 +22,7 @@
     (async function(){
       const base = location.pathname.replace(/\/[^\/]*$/, '');
       const candidates = [
-        '/WEBJECT/resources/cv/cv.pdf',
+        'resources/cv/cv.pdf',
         base + '/resources/cv/cv.pdf',
       ];
 
@@ -43,7 +43,7 @@
       if (!found) {
         status.querySelector('h2').textContent = 'CV not found';
         status.querySelector('p').innerHTML =
-          'Place your file at <code>/WEBJECT/resources/cv/cv.pdf</code> (or one of the tried paths) and reload.';
+          'Place your file at <code>resources/cv/cv.pdf</code> (or one of the tried paths) and reload.';
         return;
       }
 
@@ -57,3 +57,4 @@
   </script>
 </body>
 </html>
+
