@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dawood — Portfolio</title>
+  <meta name="description" content="Portfolio website for Dawood, CSE student at United International University (UIU)." />
+  <meta name="color-scheme" content="dark light" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="drahman.css">
+</head>
+<body>
+  <!-- Background  -->
+  <canvas id="star-canvas" aria-hidden="true"></canvas>
+  
+  <!-- Header -->
+  <header>
+    <nav class="nav">
+      <div class="brand">
+        <span class="dot" aria-hidden="true"></span>
+        <span>Dawoodur R.</span>
+      </div>
+      <button class="burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="menu">☰</button>
+      <div class="menu" id="menu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#books">Books</a>
+        <a class="cta" href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <main id="home" class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="badge">👋Hi, I'm a newbie</span>
+        <h1 class="h1">Dawoodur Rahman</h1>
+        <p class="lead">Machine Learning enthusiast & <strong>CSE student</strong> at <strong>United International University (UIU)</strong>.</p>
+        <div class="counts">
+          <div class="count"><b data-count="7">0</b><span class="muted">Projects</span></div>
+          <div class="count"><b data-count="0">0</b><span class="muted">Hackathons</span></div>
+          <div class="count"><b data-count="0">0</b><span class="muted">Internships</span></div>
+        </div>
+      </div>
+      <div class="portrait" aria-hidden="true">
+        <div class="shape"></div>
+        <img class="avatar" src="/WEBJECT/resources/pictures/dawood.jpg" alt="Dawoodur Rahman" />
+        <span class="tech-frame" aria-hidden="true"></span>
+      </div>
+      <div class="actions">
+        <a class="btn-cv" href="hassan.html" role="button">View CV</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title"><span class="bar"></span> About Me</h2>
+      <div class="card-grid">
+        <article class="card reveal">
+          <h3>Who I am</h3>
+          <p class="muted">I'm a hands on learner who loves turning ideas into working systems and learning something new every day. I might overestimate problems but somehow make them work at the end. When I’m not coding, I’m probably reading a bunch of books.</p>
+        </article>
+        <article class="card reveal">
+          <h3>What I'm doing now</h3>
+          <p class="muted">Studying <strong>Computer Science & Engineering</strong> at <strong>UIU</strong>. On the side, I’m trying to master FastAPI, exploring Machine Learning concepts, and working on side projects that blend logic with creativity. I believe small consistent builds teach more than big incomplete ones.</p>
+        </article>
+      </div>
+      <!-- Secret gatewayy -->
+      <div class="unlock reveal">
+        <div class="panel">
+          <label for="secret-input" class="muted" style="display:block; margin-bottom:8px;">
+            Wanna know a bit more about me? You're a bit more interested, don't you? Enter the code then-
+          </label>
+          <form id="secret-form" autocomplete="off">
+            <input id="secret-input" type="password" placeholder="Enter the secret code" aria-label="Secret code" />
+            <button class="btn" type="submit">Unlock</button>
+            <span id="secret-msg" class="error">Wrong code. Try again.</span>
+          </form>
+        </div>
+
+        <!-- Revealed on correct passwd -->
+        <div id="secret-cards" class="card-grid three-cards hidden" style="margin-top:14px;">
+          <article class="card theme-spring">
+            <h3>Mentors</h3>
+            <div class="roster">
+              <div class="mini">
+                <img src="/WEBJECT/resources/pictures/hossain.jpg" alt="x" loading="lazy">
+                <div>
+                  <div class="name">Hossain Ahammad</div>
+                  <div class="nick">aka “Voss”</div>
+                </div>
+              </div>
+              <div class="mini">
+                <img src="/WEBJECT/resources/pictures/dipu.jpg" alt="y" loading="lazy">
+                <div>
+                  <div class="name">T. M. Alam Dipu</div>
+                  <div class="nick">aka “Turing Machine”</div>
+                </div>
+              </div>
+              <div class="mini">
+                <img src="/WEBJECT/resources/pictures/ishtiaqullah.jpg" alt="z" loading="lazy">
+                <div>
+                  <div class="name">Abul Hasnat Muhammad Ishtiaqullah</div>
+                  <div class="nick">aka “Adolf Husler”</div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card theme-cold">
+            <h3>Friends</h3>
+            <div class="roster">
+              <div class="mini">
+                <img src="/WEBJECT/resources/pictures/salman.jpg" alt="x" loading="lazy">
+                <div>
+                  <div class="name">Salman Morshed</div>
+                  <div class="nick">aka “Legend”</div>
+                </div>
+              </div>
+              <div class="mini">
+                <img src="/WEBJECT/resources/pictures/shihab.jpg" alt="y" loading="lazy">
+                <div>
+                  <div class="name">Shihab Shikdar</div>
+                  <div class="nick">aka “Slyy”</div>
+                </div>
+              </div>
+              <div class="mini">
+                <img src="/WEBJECT/resources/pictures/samiul.jpg" alt="z" loading="lazy">
+                <div>
+                  <div class="name">Samiul Hoque</div>
+                  <div class="nick">aka “Savage”</div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card theme-fire">
+            <h3>Foes</h3>
+            <div class="roster">
+              <div class="mini">
+                <img src="/WEBJECT/resources/pictures/sifat.jpg" alt="x" loading="lazy">
+                <div>
+                  <div class="name">Sifatullah</div>
+                  <div class="nick">aka “Racist Clanker”</div>
+                </div>
+              </div>
+              <div class="mini">
+                <img src="/WEBJECT/resources/pictures/poop.jpg" alt="y" loading="lazy">
+                <div>
+                  <div class="name">Sifat's cat</div>
+                  <div class="nick">aka “Poopycat”</div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-title"><span class="bar"></span> Tech Stack</h2>
+      <div class="skills">
+        <div class="skill reveal">HTML • CSS • Modern JS</div>
+        <div class="skill reveal">Python • FastAPI (beginner)</div>
+        <div class="skill reveal">MySQL • MongoDB (basics)</div>
+        <div class="skill reveal">Git • GitHub • CI/CD (beginner)</div>
+        <div class="skill reveal">Figma • Accessibility • Perf</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience / Education Timeline -->
+  <section id="experience">
+    <div class="container">
+      <h2 class="section-title"><span class="bar"></span> Experience & Education</h2>
+      <div class="card reveal">
+        <div class="timeline">
+          <div class="tl-item">
+            <h3>United International University — BSc in CSE</h3>
+            <p class="muted">2023 — Present · Dhaka, Bangladesh</p>
+            <p class="muted">Relevant coursework: Data Structure & Algorithm, OOP, Artificial Intelligence.</p>
+          </div>
+          <div class="tl-item">
+            <h3>Open Source & Community</h3>
+            <p class="muted">Occasional PRs, issues, and discussions on GitHub & Reddit.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Books -->
+  <section id="books">
+    <div class="container">
+      <h2 class="section-title"><span class="bar"></span> Now Reading</h2>
+
+      <div class="card-grid">
+        <article class="card reveal" style="grid-column:span 3; padding:10px; display:grid; gap:8px;">
+          <div
+            aria-label="Overthrow — Stephen Kinzer (cover)"
+            style="
+              width:100%; aspect-ratio:2/3; border-radius:12px;
+              background:
+                linear-gradient(0deg, rgba(0,0,0,.06), rgba(0,0,0,.06)),
+                url('/WEBJECT/resources/pictures/overthrow.png') center/cover no-repeat;
+              box-shadow: 0 6px 20px rgba(0,0,0,.35);
+            ">
+          </div>
+          <h3 style="margin:2px 0 4px; font-size:16px; line-height:1.25;">Overthrow</h3>
+          <p class="muted" style="margin:0; font-size:13px;">by Stephen Kinzer</p>
+          <div style="display:flex; align-items:center; gap:12px; margin-top:6px;">
+            <span style="font-size:11px; padding:4px 8px; border-radius:999px; background:linear-gradient(135deg,var(--accent),var(--accent-2)); color:#0b1020; font-weight:700;">History</span>
+            <a href="https://z-library.co/book/17931501" style="margin-left:auto; font-size:12px; font-weight:800; padding:6px 10px; border-radius:10px; background:linear-gradient(135deg,var(--accent),var(--accent-2)); color:#0b1020; text-decoration:none;">Read Online</a>
+          </div>
+        </article>
+
+        <article class="card reveal" style="grid-column:span 3; padding:10px; display:grid; gap:8px;">
+          <div
+            aria-label="Build a Large Language Model (From Scratch) — Sebastian Raschka (cover)"
+            style="
+              width:100%; aspect-ratio:2/3; border-radius:12px;
+              background:
+                linear-gradient(0deg, rgba(0,0,0,.06), rgba(0,0,0,.06)),
+                url('/WEBJECT/resources/pictures/llm-from-scratch.png') center/cover no-repeat;
+              box-shadow: 0 6px 20px rgba(0,0,0,.35);
+            ">
+          </div>
+          <h3 style="margin:2px 0 4px; font-size:16px; line-height:1.25;">Build a Large Language Model (From Scratch)</h3>
+          <p class="muted" style="margin:0; font-size:13px;">by Sebastian Raschka</p>
+          <div style="display:flex; align-items:center; gap:12px; margin-top:6px;">
+            <span style="font-size:11px; padding:4px 8px; border-radius:999px; background:linear-gradient(135deg,var(--accent),var(--accent-2)); color:#0b1020; font-weight:700;">AI / ML</span>
+            <a href="https://z-library.co/book/18369223" style="margin-left:auto; font-size:12px; font-weight:800; padding:6px 10px; border-radius:10px; background:linear-gradient(135deg,var(--accent),var(--accent-2)); color:#0b1020; text-decoration:none;">Read Online</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / Footer -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title"><span class="bar"></span> Get in touch</h2>
+      <div class="card reveal"
+          style="display:flex; flex-direction:column; align-items:center; text-align:center;">
+        <p class="muted" style="margin:0 0 12px;">
+          Have a project, internship, or collab in mind? Email me and VOALA! I’ll not respond XD.
+        </p>
+
+        <p style="margin:0 0 12px;">
+          <a class="cta" href="mailto:dawoodurrahman20@gmail.com" style="display:inline-block;">
+            Mail: dawoodurrahman20@gmail.com
+          </a>
+        </p>
+
+        <div class="socials" style="margin-top:12px; justify-content:center; align-items:center;"> 
+          <a class="chip" href="https://www.facebook.com/dawoodur" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M22 12.06C22 6.49 17.52 2 12 2S2 6.49 2 12.06C2 17.08 5.66 21.2 10.44 22v-7.04H7.9v-2.9h2.54V9.78c0-2.5 1.5-3.88 3.78-3.88 1.1 0 2.26.2 2.26.2v2.48h-1.27c-1.25 0-1.64.78-1.64 1.58v1.9h2.79l-.45 2.9h-2.34V22C18.34 21.2 22 17.08 22 12.06z"/>
+            </svg>
+            <span>Facebook</span>
+          </a>
+
+          <a class="chip" href="https://github.com/dawoodur" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.1.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.38-1.34-1.74-1.34-1.74-1.09-.74.08-.73.08-.73 1.2.08 1.83 1.24 1.83 1.24 1.07 1.83 2.8 1.3 3.48.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.34-5.47-5.97 0-1.32.47-2.4 1.24-3.24-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23.96-.27 1.98-.4 3-.41 1.02 0 2.04.14 3 .41 2.28-1.55 3.29-1.23 3.29-1.23.66 1.65.24 2.87.12 3.17.78.84 1.24 1.92 1.24 3.24 0 4.64-2.8 5.67-5.48 5.97.43.37.81 1.09.81 2.2v3.26c0 .32.22.69.82.58A12 12 0 0 0 12 .5z"/>
+            </svg>
+            <span>GitHub</span>
+          </a>
+
+          <a class="chip" href="https://www.linkedin.com/in/hassan247#" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23h-4V8.5zm7 0h3.84v1.97h.05c.53-1 1.84-2.05 3.8-2.05 4.06 0 4.81 2.67 4.81 6.15V23h-4v-6.44c0-1.54-.03-3.52-2.15-3.52-2.15 0-2.48 1.67-2.48 3.4V23h-4V8.5z"/>
+            </svg>
+            <span>LinkedIn</span>
+          </a>
+
+          <a class="chip" href="https://www.kaggle.com/dawoodurrahman" aria-label="Kaggle">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M5 4h2v7l6-7h3l-5.5 6.4L16 20h-3l-6-8v8H5V4z"/>
+            </svg>
+            <span>Kaggle</span>
+          </a>
+        </div>
+      </div>
+      <footer class="container">
+        <p class="muted">© <span id="year"></span> Hassan. Designed & built with ❤️.</p>
+      </footer>
+    </div>
+  </section>
+
+  <script>
+    // Mobile menu toggle
+    const burger = document.querySelector('.burger');
+    const menu = document.getElementById('menu');
+    burger?.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      burger.setAttribute('aria-expanded', String(open));
+    });
+
+    // === STARFIELD ===
+    (function(){
+      const cvs = document.getElementById('star-canvas');
+      if(!cvs) return;
+      const ctx = cvs.getContext('2d');
+
+      let W = 0, H = 0, DPR = Math.max(1, window.devicePixelRatio || 1);
+      function resize(){
+        W = innerWidth; H = innerHeight;
+        cvs.width = Math.floor(W * DPR);
+        cvs.height = Math.floor(H * DPR);
+        cvs.style.width = W + 'px';
+        cvs.style.height = H + 'px';
+        ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+        makeStars();
+      }
+      addEventListener('resize', resize);
+
+      let stars = [];
+      function starCount(){
+        const base = Math.floor((W * H) / 14000);
+        return Math.max(60, Math.min(220, base));
+      }
+      function makeStars(){
+        const n = starCount();
+        stars = new Array(n).fill(0).map(() => ({
+          x: Math.random() * W,
+          y: Math.random() * H,
+          vx: (Math.random()-0.5) * 0.15,
+          vy: (Math.random()-0.5) * 0.15,
+          r: Math.random() * 1.4 + 0.3,
+          tw: Math.random() * Math.PI * 2
+        }));
+      }
+
+      let mx = 0, my = 0;
+      addEventListener('mousemove', e => {
+        mx = (e.clientX / W - 0.5);
+        my = (e.clientY / H - 0.5);
+      }, { passive:true });
+
+      let camY = 0, targetY = 0;
+      addEventListener('scroll', () => {
+        targetY = scrollY * 0.20;
+      }, { passive:true });
+
+      function drawStars(t){
+        for(const s of stars){
+          const alpha = 0.55 + 0.45 * Math.sin(t*0.002 + s.tw);
+          ctx.fillStyle = `rgba(255,255,255,${alpha.toFixed(3)})`;
+          ctx.beginPath();
+          ctx.arc(s.x, s.y, s.r, 0, Math.PI*2);
+          ctx.fill();
+        }
+      }
+      function advanceStars(){
+        for(const s of stars){
+          s.x += s.vx; s.y += s.vy;
+          if (s.x < -2) s.x = W+2; else if (s.x > W+2) s.x = -2;
+          if (s.y < -2) s.y = H+2; else if (s.y > H+2) s.y = -2;
+        }
+      }
+
+      function tick(t){
+        camY += (targetY - camY) * 0.12;
+        ctx.clearRect(0,0,W,H);
+        ctx.save();
+
+        const yOff = -Math.round(camY % H);
+        ctx.translate(Math.round(mx*10), Math.round(my*8) + yOff);
+        drawStars(t);
+        ctx.translate(0, H + 1);
+        drawStars(t);
+        ctx.restore();
+
+        advanceStars();
+        requestAnimationFrame(tick);
+      }
+
+      resize();
+      requestAnimationFrame(tick);
+    })();
+
+    (function(){
+      const MAX_TILT = 2.5;
+      const els = document.querySelectorAll('.card');
+      els.forEach(card=>{
+        let raf = 0;
+        function onMove(e){
+          const r = card.getBoundingClientRect();
+          const px = (e.clientX - r.left) / r.width;
+          const py = (e.clientY - r.top)  / r.height;
+          const rx = (py - 0.5) * MAX_TILT;
+          const ry = (0.5 - px) * MAX_TILT;
+          cancelAnimationFrame(raf);
+          raf = requestAnimationFrame(()=>{
+            card.style.transform =
+              `perspective(800px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-4px)`;
+          });
+        }
+        function onLeave(){
+          cancelAnimationFrame(raf);
+          card.style.transform = '';
+        }
+        card.addEventListener('mousemove', onMove);
+        card.addEventListener('mouseleave', onLeave);
+        card.addEventListener('touchend', onLeave, { passive:true });
+      });
+    })();
+
+    const headerEl = document.querySelector('header');
+    function setNavOffset(){
+      document.documentElement.style.setProperty('--nav-offset', headerEl.offsetHeight + 'px');
+    }
+    setNavOffset();
+    window.addEventListener('resize', setNavOffset);
+
+    const _bar = document.createElement('div');
+    _bar.style.cssText = 'position:fixed;left:0;top:0;height:3px;width:100%;transform-origin:left;'+
+                        'background:linear-gradient(90deg,var(--accent),var(--accent-2));'+
+                        'transform:scaleX(0);z-index:10000';
+    document.body.appendChild(_bar);
+
+    function updateScrollStuff(){
+      const s = document.documentElement;
+      const p = s.scrollTop / (s.scrollHeight - s.clientHeight);
+      _bar.style.transform = 'scaleX(' + (isFinite(p) ? p : 0) + ')';
+
+      document.body.classList.toggle('scrolled', window.scrollY > 4);
+
+      const y = window.scrollY + headerEl.offsetHeight + 8;
+      const sections = Array.from(document.querySelectorAll('main[id], section[id]'));
+      let current = sections[0]?.id || 'home';
+      for (const sec of sections) if (sec.offsetTop <= y) current = sec.id;
+      document.querySelectorAll('.menu a[href^="#"]').forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+      });
+    }
+    updateScrollStuff();
+    window.addEventListener('scroll', updateScrollStuff, { passive:true });
+
+    const counters = document.querySelectorAll('[data-count]');
+    const step = (ts, el, start, end, t0) => {
+      const d = Math.min(1, (ts - t0) / 1200);
+      el.textContent = Math.floor(start + d * (end - start));
+      if (d < 1) requestAnimationFrame(t => step(t, el, start, end, t0));
+    };
+    counters.forEach(el => {
+      const end = Number(el.getAttribute('data-count') || 0);
+      const io = new IntersectionObserver((entries, obs)=>{
+        if(entries[0].isIntersecting){
+          requestAnimationFrame(t => step(t, el, 0, end, performance.now()));
+          obs.disconnect();
+        }
+      }, {threshold:.6});
+      io.observe(el);
+    });
+
+    const revealEls = document.querySelectorAll('.reveal');
+    const io2 = new IntersectionObserver((entries)=>{
+      entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); } });
+    }, {threshold:.2});
+    revealEls.forEach(el => io2.observe(el));
+
+    // --- Unlock logic ---
+    (function(){
+      const form  = document.getElementById('secret-form');
+      const input = document.getElementById('secret-input');
+      const cards = document.getElementById('secret-cards');
+      const msg   = document.getElementById('secret-msg');
+
+      const valid = new Set(['hassanIsGreat','sifatIsGay','samiulIsSavage']);
+
+      form?.addEventListener('submit', (e)=>{
+        e.preventDefault();
+        const v = (input.value || '').trim();
+        if (valid.has(v)) {
+          cards.classList.remove('hidden');
+          msg.style.display = 'none';
+          input.value = '';
+          cards.scrollIntoView({ behavior:'smooth', block:'start' });
+        } else {
+          msg.style.display = 'inline';
+          cards.classList.add('hidden');
+          input.focus();
+        }
+      });
+    })();
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

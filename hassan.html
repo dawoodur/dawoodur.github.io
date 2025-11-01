@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>CV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="hassan.css">
+</head>
+<body>
+  <div id="status">
+    <div class="box">
+      <h2 style="margin:0 0 10px;">Loading CV…</h2>
+      <p class="muted" style="margin:0;">If this takes more than a moment, make sure your CGPA is above 3.5 <code>ERRORCGPA 404</code>.</p>
+    </div>
+  </div>
+
+  <iframe id="cv" title="CV PDF Viewer"></iframe>
+
+  <script>
+    (async function(){
+      const base = location.pathname.replace(/\/[^\/]*$/, '');
+      const candidates = [
+        '/WEBJECT/resources/cv/cv.pdf',
+        base + '/resources/cv/cv.pdf',
+      ];
+
+      let found = null;
+      for (const url of candidates) {
+        try {
+          const r = await fetch(url, { method: 'HEAD' });
+          if (r.ok) { 
+            found = url; 
+            break; 
+          }
+        } catch {}
+      }
+
+      const status = document.getElementById('status');
+      const frame  = document.getElementById('cv');
+
+      if (!found) {
+        status.querySelector('h2').textContent = 'CV not found';
+        status.querySelector('p').innerHTML =
+          'Place your file at <code>/WEBJECT/resources/cv/cv.pdf</code> (or one of the tried paths) and reload.';
+        return;
+      }
+
+      const params = '#zoom=page-fit&view=Fit&toolbar=0&navpanes=0&pagemode=none';
+      frame.src = found + params;
+
+
+      frame.style.display = 'block';
+      status.remove();
+    })();
+  </script>
+</body>
+</html>
